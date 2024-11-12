@@ -1,0 +1,16 @@
+services:
+  database:
+    image: mongo:latest
+    container_name: database
+    ports:
+      - "27017:27017"
+    command: mongod --logpath /var/log/mongodb/mongod.log --logappend --quiet --setParameter logLevel=2
+    volumes:
+      - ./database:/data/db
+    networks:
+      - private
+
+
+networks:
+  private:
+    driver: bridge
