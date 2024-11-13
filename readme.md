@@ -49,3 +49,8 @@ chmod +x mongodump.sh && chmod +x mongorestore.sh
 ./mongorestore.sh
 ```
 
+# Docker compose + MongoDB Backup restore
+```bash
+./docker-compose-db-restore.sh
+```
+
